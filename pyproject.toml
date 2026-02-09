@@ -1,7 +1,7 @@
 [project]
 name = "enscons-forked"
 description = "Tools for building Python packages with SCons (forked for providing some useful features)"
-version = "0.28.0"
+version = "0.28.1"
 
 authors = [{ name = "Christoph Wiedemann", email = "62332054+cwiede@users.noreply.github.com" }]
 classifiers = [
