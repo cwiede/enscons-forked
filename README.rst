@@ -19,8 +19,6 @@ This fork adds the following features to plain enscons:
 
 * possibility to have smaller SConstructs with the help of enscons.helper module (remove boilerplate code)
 
-* experimentally support pyarmor
-
 What does enscons provide?
 --------------------------
 
