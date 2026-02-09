@@ -2,7 +2,6 @@
 Utilities otherwise provided by pkg_resources or wheel
 """
 
-from pkg_resources import safe_name, safe_extra, to_filename
 from packaging.requirements import Requirement
 
 # from wheel
@@ -33,7 +32,6 @@ def generate_requirements(extras_require):
         if ":" in extra:  # setuptools extra:condition syntax
             extra, condition = extra.split(":", 1)
 
-        extra = safe_extra(extra)
         if extra:
             yield "Provides-Extra", extra
             if condition:

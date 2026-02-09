@@ -25,6 +25,7 @@
 from __future__ import unicode_literals, print_function
 
 import os
+import re
 import sys
 import time
 
@@ -68,7 +69,7 @@ from SCons.Script import Copy, Action, FindInstalledFiles, GetOption, AddOption
 from distutils import sysconfig
 from collections import defaultdict
 
-from .util import safe_name, to_filename, generate_requirements
+from .util import generate_requirements
 
 import codecs
 import distutils.ccompiler, distutils.sysconfig, distutils.unixccompiler
@@ -112,7 +113,7 @@ def get_abi3_tag():
 
 def normalize_package(name):
     # XXX encourage project names to start out 'safe'
-    return to_filename(safe_name(name))
+    return re.sub(r"[-_.]+", "-", name).lower()
 
 
 def egg_info_targets(env):
